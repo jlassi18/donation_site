@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .signup-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 20px; /* Added to create space at the bottom */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type=text], input[type=email], input[type=password], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #87ceeb;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #442d9a;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .login-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Sign Up</h1>
+    <form action="/signup" method="post">
+      <label for="fullname">Nom :</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Votre nom complet" required>
+
+      <label for="email">Adresse e-mail :</label>
+      <input type="email" id="email" name="email" placeholder="Une adresse e-mail valide" required>
+
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="password" placeholder="Créez un mot de passe sécurisé" required>
+
+      <label for="confirm-password">Confirmation du mot de passe :</label>
+      <input type="password" id="confirm-password" name="confirm-password" placeholder="Répétez le mot de passe pour confirmation" required>
+
+      <label for="role">Rôle :</label>
+      <select id="role" name="role" required>
+        <option value="">Sélectionnez votre rôle</option>
+        <option value="porteur-projet">Porteur de projet</option>
+        <!-- Add other roles if needed -->
+      </select>
+
+      <h3>Choisir la Méthode de Paiement</h3>
+      <label for="payment-method">Méthode de Paiement :</label>
+      <select id="payment-method" name="payment-method" required>
+        <option value="">Sélectionnez un mode de paiement</option>
+        <option value="bank-transfer">Virement bancaire</option>
+        <option value="paypal">PayPal</option>
+        <!-- Add other payment methods if needed -->
+      </select>
+
+      <h3>Fournir les Détails Bancaires</h3>
+      <label for="bank-name">Nom de la Banque :</label>
+      <input type="text" id="bank-name" name="bank-name" required>
+
+      <label for="account-number">Numéro de Compte :</label>
+      <input type="text" id="account-number" name="account-number" required>
+
+      <label for="iban">Code IBAN :</label>
+      <input type="text" id="iban" name="iban" required>
+
+      <label for="swift">Code SWIFT/BIC :</label>
+      <input type="text" id="swift" name="swift" required>
+
+      <label for="account-holder">Nom du Titulaire du Compte :</label>
+      <input type="text" id="account-holder" name="account-holder" required>
+
+      <label for="bank-address">Adresse de la Banque :</label>
+      <input type="text" id="bank-address" name="bank-address">
+
+      <h3>Informations d'Identification</h3>
+      <label for="id-document">Pièce d’Identité :</label>
+      <input type="text" id="id-document" name="id-document" placeholder="Carte d’identité ou passeport" required>
+
+      <label for="residence-proof">Justificatif de Domicile :</label>
+      <input type="text" id="residence-proof" name="residence-proof" placeholder="Facture de services publics ou autre document prouvant votre adresse" required>
+
+      <label for="bank-statement">Relevé Bancaire :</label>
+      <input type="text" id="bank-statement" name="bank-statement" placeholder="Un relevé bancaire récent" required>
+
+      <label for="payment-frequency">Fréquence des Paiements :</label>
+      <input type="text" id="payment-frequency" name="payment-frequency" placeholder="Hebdomadaire, mensuel, etc." required>
+
+      <label for="transfer-methods">Méthodes de Transfert :</label>
+      <input type="text" id="transfer-methods" name="transfer-methods" placeholder="Ex: PayPal" required>
+
+      <button type="submit">Se connecter </button>
+    </form>
+
+    <div class="login-link">
+      <p>Vous avez déjà un compte ?<br><br><a href="loginEntreprise.html">Connectez-vous ici</a></p>
+    </div>
+  </div>
+</body>
+</html>
